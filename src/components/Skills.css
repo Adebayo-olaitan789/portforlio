@@ -1,0 +1,35 @@
+.skills-page {
+  text-align: center;
+  padding: 40px;
+  background-color: rgb(218, 218, 147);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.skill-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.skill-item h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.skill-item p {
+  font-size: 0.9em;
+  color: #666;
+}

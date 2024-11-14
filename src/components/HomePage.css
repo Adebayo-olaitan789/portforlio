@@ -1,0 +1,62 @@
+.homepage {
+  position: relative;
+  text-align: center;
+  padding: 40px;
+  overflow: hidden; /* Hides overflow from animation */
+}
+
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(45deg, #ff6f61, #ff9e80, #ff3d3d, #ffcc80);
+  background-size: 400% 400%;
+  animation: animateBackground 8s infinite linear;
+  z-index: 1;
+  filter: blur(20px); /* Adds depth to the effect */
+}
+
+/* Keyframes for the 3D animated background */
+@keyframes animateBackground {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-25%) rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+}
+
+.port {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.pick {
+  font-size: 20px;
+  width: 500px;
+  position: relative;
+  right: -350px;
+}
+
+@media screen and (max-width: 600px) {
+  .port {
+    font-size: 1.5em;
+  }
+  .pick {
+    font-size: 1em;
+    /* position: relative;
+    right: 20px; */
+  }
+}

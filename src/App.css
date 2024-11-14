@@ -1,0 +1,72 @@
+/* Global styles */
+body {
+  margin: 0;
+  background: linear-gradient(
+    270deg,
+    #ff9a9e,
+    #fad0c4,
+    #fad0c4,
+    #fbc2eb,
+    #8fd3f4
+  );
+  background-size: 1200% 1200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Sections styling */
+.skills-page,
+.projects-page,
+.contact-page {
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Scroll snapping */
+.homepage,
+.skills-page,
+.projects-page,
+.contact-page {
+  scroll-snap-align: start;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive styling for mobile */
+@media screen and (max-width: 600px) {
+  body {
+    background-size: 1500% 1500%; /* Adjust background size for mobile */
+    animation: gradientAnimation 15s ease infinite; /* Slower animation on mobile */
+  }
+
+  .skills-page,
+  .projects-page,
+  .contact-page {
+    padding: 40px 15px; /* Less padding on smaller screens */
+  }
+
+  .homepage .port {
+    font-size: 1.3em; /* Smaller font for the heading on mobile */
+  }
+
+  .homepage .pick {
+    font-size: 1em; /* Adjust font size for better readability */
+    width: 100%; /* Full-width text on mobile */
+    padding: 0 10px; /* Add padding for mobile */
+  }
+}

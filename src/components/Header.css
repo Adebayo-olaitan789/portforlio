@@ -1,0 +1,74 @@
+/* General Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.lit {
+  width: 80px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+/* Desktop Navigation List */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-list li {
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+  }
+
+  /* Overlay background */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with opacity */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .overlay.open {
+    display: flex; /* Show overlay when menu is open */
+  }
+
+  .nav-list {
+    list-style: none;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .nav-list li {
+    color: white; /* White text for visibility */
+    cursor: pointer;
+  }
+}
